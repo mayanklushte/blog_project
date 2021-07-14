@@ -1,0 +1,14 @@
+{% extends 'blog_app_base.html' %}
+
+{% block title %} User Login{% endblock title %} 
+{% block body %}
+<div class="container mt-3 border-1">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+</div>
+{% endblock body %}
