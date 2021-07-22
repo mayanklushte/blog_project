@@ -7,12 +7,10 @@ from .models import User
 class UserRegisterForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('username','first_name', 'last_name', 'email', 'password', 'mobile_no', 'address', 'City', 'State', 'Country', 'PinCode', 'Profile_Image')
+        fields = ('first_name', 'last_name', 'email', 'password', 'mobile_no', 'address', 'City', 'State', 'Country', 'PinCode', 'Profile_Image')
 
         widgets = {
-            'username': forms.TextInput(attrs={
-                'class': 'form-control'
-            }),
+            
             'first_name': forms.TextInput(attrs={
                 'class': 'form-control'
             }),
